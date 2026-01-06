@@ -6,6 +6,9 @@ import asyncio
 from pydub import AudioSegment
 import os
 import tempfile
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 
@@ -50,7 +53,7 @@ async def video_note_handler(update: Update, context):
     await update.message.reply_text(f"🎥 Round video transcription: {text}")
 
 def main():
-    app = Application.builder().token("YOUR_BOT_TOKEN").build()
+    app = Application.builder().token( os.getenv("TOKEN_TG_BOT") ).build()
     app.add_handler(MessageHandler(filters.VOICE, voice_handler))
     app.add_handler(MessageHandler(filters.VIDEO_NOTE, video_note_handler))
     app.run_polling()
