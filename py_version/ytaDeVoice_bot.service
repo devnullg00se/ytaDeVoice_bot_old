@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram ytaDeVoice bot
+After=network.target
+
+[Service]
+User=eternalduck
+WorkingDirectory=/home/your_linux_user/ytaDeVoice_bot
+Environment=TOKEN_TG_BOT=8511013734:AAFbZeh6StDtqPUAItWQRSm7xyQm_Bt-q7o
+ExecStart=/home/eternalduck/ytaDeVoice_bot/venv/bin/python /home/eternalduck/ytaDeVoice_bot/ytaDeVoice_bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

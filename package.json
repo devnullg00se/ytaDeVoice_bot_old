@@ -1,0 +1,20 @@
+{
+  "name": "ytadevoice_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ytaDeVoice_bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "fluent-ffmpeg": "^2.1.3",
+    "form-data": "^4.0.5",
+    "node-telegram-bot-api": "^0.63.0"
+  }
+}
